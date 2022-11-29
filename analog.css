@@ -1,0 +1,85 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  body {
+  width: 100%;
+  height:650px;
+ 
+  }
+  .container {
+    position:absolute;
+    top:20px;
+    left:20px;
+
+  }
+  .clock {
+    position:relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 450px;
+    height: 450px;
+    background:url("pexels-heloisa-vecchio-6760183.jpg");
+    background-size: cover;
+    border-radius: 50%;
+    box-shadow:inset 0px 0px 60px black,0px 0px 70px black,0px 0px 80px black,inset 0px 0px 100px black;
+  }
+  .clock::before {
+    content: "";
+    position: absolute;
+    width: 8px;
+    height: 8px;
+    background: #010810;
+    border: 3px solid #fff;
+    border-radius: 50%;
+    z-index: 1000;
+  }
+  .clock span {
+    position: absolute;
+    inset: 15px;
+    color:wheat;
+    text-align: center;
+    transform: rotate(calc(30deg * var(--i)));
+  }
+  .clock span b {
+    font-size: 3em;
+    font-weight: 700;
+    display: inline-block;
+    transform: rotate(calc(-30deg * var(--i)));
+  }
+  .circle {
+    position: absolute;
+    width: 300px;
+    height: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+
+  }
+  .circle i {
+    position: absolute;
+    width: 2px;
+    height: 50%;
+    background: var(--clr);
+    transform-origin: bottom;
+    /* opacity: 0.5; */
+    transform: rotateZ("-30");
+   
+  }
+
+  .circle2 {
+    width: 240px;
+    height: 240px;
+    z-index: 9;
+  }
+  .circle3 i{
+  width: 6px;
+  border-radius: 5px;
+  }
+  .circle3 {
+    width: 180px;
+    height: 180px;
+    z-index: 8;
+  }
